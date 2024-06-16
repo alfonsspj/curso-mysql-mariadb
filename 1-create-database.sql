@@ -16,4 +16,13 @@ DROP DATABASE metro_cdmx;
 -- Mostrar todas las bd creadas --
 SHOW DATABASES;
 
+
+
+-- Crear usuario, asignar privilegios y activar privilegios
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'tu-password';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
+FLUSH PRIVILEGES;
+
+
+
  
