@@ -93,9 +93,35 @@ MODIFY COLUMN nombre_columna TIPO RESTRICCIONES;
 ```
 
 
+17. Verificar si se insertaron los registros
+```sql
+SELECT * FROM `lines`;
+```
+
+18. Eliminar el contenido de una tabla
+```sql
+-- en caso de que algun campo este siendo referenciada por una clave foranea. No se puede eliminar por restricciones de integridad referencial 
+
+--Solución: Desactivar y Activar la Verificación de Claves Foráneas
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE `lines`;
+SET FOREIGN_KEY_CHECKS = 1;
+```
+19. Actualización de información: actualizar registro
+```sql
+UPDATE table_name
+SET column_name = "New value"
+WHERE column_condition = "value_condition";
+```
 
 
 
+```sql
+
+```
+```sql
+
+```
 ```sql
 
 ```

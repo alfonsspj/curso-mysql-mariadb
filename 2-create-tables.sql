@@ -11,7 +11,6 @@ CREATE TABLE `lines` (
     `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 )
-
 -- tipo de caracteres almacenados en la bd -- como comparar los caracteres ingresados
 DEFAULT CHARSET=utf8mb4
 COLLATE=utf8mb4_unicode_ci;
