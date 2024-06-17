@@ -1,5 +1,8 @@
 USE metro_cdmx;
 
+--  ALTER table en su columna updated_at ya que no se actualiza en la edición automáticamente
+ALTER TABLE `stations`
+MODIFY COLUMN `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
 
 UPDATE `stations`
 SET name = "Lázaro Cárdenas"

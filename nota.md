@@ -114,8 +114,23 @@ SET column_name = "New value"
 WHERE column_condition = "value_condition";
 ```
 
+20. Eliminar un registro de una tabla 
+```sql
+DELETE FROM `table_name`
+WHERE colum_condition = "value_condition";
+```
+21. Eliminar una tabla - los registros que hay en la tabla
+```sql
+DELETE FROM `table_name`;
+```
+22. Eliminar una tabla, reiniciando los ids
+```sql
+TRUNNCATE TABLE `table_name`;
+```
+23.
+```sql
 
-
+```
 ```sql
 
 ```
