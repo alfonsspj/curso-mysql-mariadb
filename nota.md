@@ -127,10 +127,38 @@ DELETE FROM `table_name`;
 ```sql
 TRUNNCATE TABLE `table_name`;
 ```
-23.
+23. PUEDES HACER PARA CREAR UNA TABLA IGUAL A stations APLICANDO ESTE COMANDO:
 ```sql
-
+CREATE TABLE stations_delete SELECT * FROM stations;
 ```
+
+24. Para eliminar una vez identificado todos los id también podríamos utilizar el siguiente query:
+DELETE FROM `stations` WHERE id IN (164,165,166)
+25. Una manera de saber los IDs de más de un record en SQL es usando IN
+
+
+SELECT name, id FROM stations WHERE name IN("Merced", "Lázaro de Guerrero")
+. Tambien otro tip es que cuando estamos estamos haciendo un DELETE, hay que ponerle un LIMIT 1, ya que para ciertas condiciones, se pueden borrar más de uno.
+
+
+DELETE FROM stations
+WHERE id = 164
+LIMIT 1;
+
+
+26. Listando datos
+```sql
+SELECT field_name1, field_name
+FROM `table_name`
+WHERE column_condition = "value_condition";
+```
+
+
+
+
+
+
+
 ```sql
 
 ```
