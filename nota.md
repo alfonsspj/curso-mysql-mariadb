@@ -203,8 +203,21 @@ created_at,
 updated_at  
 FROM locations LIMIT 5;
 ```
-```sql
 
+
+
+### Stored Procedures -- Procedimientos almacenados
+1. 
+```sql
+DELIMITER //
+CREATE PROCEDURE procedure_name (
+    IN param_name TYPE, -- no nos permite sobreecribir su valor
+    OUT param_name TYPE -- nos permite sobreescribir su valor
+)
+BEGIN
+    -- SQL Code
+END //
+DELIMITER;
 ```
 ```sql
 
