@@ -154,11 +154,55 @@ WHERE column_condition = "value_condition";
 ```
 
 
+### Consultas anidadas
+1. 
+```sql
+SELECT calificacion
+FROM `calificaciones`
+WHERE id_estudiante = (
+    SELECT id
+    FROM estudiantes
+    WHERE nombre = "Pablito"
+);
+```
+2. notas
+Descubrí que se pueden declarar funciones en SQL, así que me puse la tarea de crear una función con la que le pasara el id de la linea y el nombre de la estación que queria relacionar y me quedó así
+
+```sql
+DELIMITER //
+CREATE FUNCTION insertTuple2(id, nameToFilter) RETURN INT
+BEGIN
+
+	INSERT INTO `metro_project`.`lines_stations` (line_id, station_id) VALUES
+	(id, (SELECT id FROM `metro_project`.`stations` WHERE name=nameToFilter))
+	
+    RETURN NULL
+END //
+
+DELIMITER;
+
+--Lo que me pareció mas interesante fue el DELIMITER (Ya que sirve para cambiar el simbolo que representa el fin de una linea en SQL) y lo determinante que es para que funcione correctamente la sentencia, me pase dos noches sin poder avanzar por no entenderlo
+
+-- Ah, y si despues necesitan ejecutar la función, lo hacen con
+SELECT insertTuple2(1, 'La estacion que quier agregar')
+```
+
+3. Para el campo de updated_at existe un EXTRA para que se vaya actualizando cada vez que se modifica un registro de la tabla ON UPDATE.
+```sql
+`updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+```
 
 
 
+```sql
 
+```
+```sql
 
+```
+```sql
+
+```
 ```sql
 
 ```
