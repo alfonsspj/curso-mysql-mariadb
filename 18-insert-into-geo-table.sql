@@ -5,7 +5,8 @@ USE metro_cdmx;
 -- Lázaro Cárdenas 19.40702104. -99-14433718 (coordena geográfica lat, lon)  --  POINT(long, lat)
 
 INSERT INTO `locations` (station_id, location) VALUES
-(1, POINT(-99-14433718, 19.40702104)), -- coordena geografica de Lazaro Cárdenas
+-- coordena geografica de Lazaro Cárdenas
+(1, POINT(-99.14433718, 19.40702104)), 
 (2, POINT(-99.173702, 19.49039233)),
 (3, POINT(-99.07262564, 19.4146103)),
 (4, POINT(-99.18803573, 19.45913691)),

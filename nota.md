@@ -194,8 +194,14 @@ SELECT insertTuple2(1, 'La estacion que quier agregar')
 
 
 ### Geolocalización
+1. Para mostrar los datos de tipo POINT directamente en la consola mysql
 ```sql
-
+SELECT id, station_id, 
+ST_X(location) AS longitude, 
+ST_Y(location) AS latitude, 
+created_at, 
+updated_at  
+FROM locations LIMIT 5;
 ```
 ```sql
 
