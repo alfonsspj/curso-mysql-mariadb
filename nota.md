@@ -219,9 +219,17 @@ BEGIN
 END //
 DELIMITER;
 ```
+
+### PREPARED STATEMENTS: 
 ```sql
 
 ```
+
+
+### TRIGGERS
+Son eventos que ocurren en nuestra base de datos. Podemos escuchar ciertos eventos y hacer acciones cada vez que sucedan.
+
+1. 
 ```sql
 
 ```
